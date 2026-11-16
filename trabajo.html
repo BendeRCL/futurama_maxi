@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trabajo: API y Explorador de Personajes de Planet Express en PostgreSQL / pgAdmin 4">
+    <meta name="author" content="BendeRCL">
+    <title>Trabajo - PostgreSQL & API Personajes | Planet Express</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/trabajo-styles.css">
+    <script src="js/personajes.js" defer></script>
+    <script src="js/trabajo.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar" aria-label="Navegación principal">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1 class="logo">🚀 Planet Express</h1>
+                </div>
+
+                <ul class="nav-links">
+                  <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="curriculum.html">Averiguame</a></li>
+                    <li><a href="index.html#personajes" class="nav-link">Personajes</a></li>
+                    <li><a href="index.html#caracteristicas" class="nav-link">Servicios</a></li>
+                    <li><a href="api.html" class="nav-link api-nav-active" aria-current="page">Tripulacion (API)</a></li>
+                    <li><a href="trabajo.html" class="nav-link">Trabajo (PostgreSQL)</a></li>
+                    <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <button class="btn-nav-cta" type="button" aria-label="Base de datos PostgreSQL">
+                    🐘 PostgreSQL (pgAdmin 4)
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="inicio" class="hero hero-trabajo">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-label">TRABAJO · POSTGRESQL & PGADMIN 4</span>
+                    <h2>Tripulación en <span class="hero-highlight">PostgreSQL</span></h2>
+                    <p>Consulta interactiva desde la base de datos 'personajes' con Express</p>
+                    <p class="hero-subtitle">
+                        Datos almacenados en PostgreSQL local (administrado con pgAdmin 4) y consultados mediante Express con <code>INNER JOIN</code> entre las tablas <code>personajes</code> y <code>especies</code>.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button id="btnReload" class="btn-primary" type="button" aria-label="Recargar personajes desde PostgreSQL">
+                            ↻ Recargar PostgreSQL
+                        </button>
+                        <a href="json/personajes.json" target="_blank" rel="noopener" class="btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+                            Ver personajes.json
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-container">
+                    <figure>
+                        <img src="img/futurama-logo.png" alt="Logo de Futurama - Planet Express" class="hero-image" width="350" height="350" loading="lazy">
+                        <figcaption>Planet Express - Base de Datos Año 3000</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        
+        <div class="trabajo-main" id="catalogo">
+
+        
+            <div class="api-status-bar" role="status" aria-live="polite">
+                <div class="api-status-info">
+                    <span id="apiDot" class="status-dot"></span>
+                    <span id="apiStatusText" class="api-status-text">Conectando con PostgreSQL local...</span>
+                </div>
+                <span id="totalBadge" class="api-count-badge">Cargando tripulación...</span>
+            </div>
+
+           
+            <section class="filtros-card" aria-label="Filtros de búsqueda de personajes">
+                <div class="filtros-grid">
+                    <div class="filtro-item">
+                        <label for="filterName">Escribe el nombre del personaje</label>
+                        <input type="text" id="filterName" placeholder="Ej: Bender, Fry, Leela, Professor..." autocomplete="off">
+                    </div>
+
+                    <div class="filtro-item">
+                        <label for="filterOccupation">¿Qué hace tu personaje?</label>
+                        <select id="filterOccupation">
+                            <option value="">Todas las ocupaciones</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-item">
+                        <label for="filterSpecies">¿Especie en PostgreSQL?</label>
+                        <select id="filterSpecies">
+                            <option value="">Todas las especies</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-btn-container">
+                        <button id="clearFilters" type="button" class="btn-primary" aria-label="Limpiar filtros">
+                            🔄 Limpiar filtros
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            
+            <p id="charactersMessage" class="section-subtitle" style="text-align: left; margin-bottom: 2rem;" role="status" aria-live="polite">
+                Cargando personajes desde la base de datos...
+            </p>
+
+            
+            <div id="contenedorPersonajes" class="contenedor-personajes" role="list">
+                
+            </div>
+        </div>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <figure class="footer-figura">
+                    <img src="img/logo-footer.png" alt="Escuadrón Planet Express" class="footer-logo" width="100" height="100" loading="lazy">
+                </figure>
+                <div class="footer-text">
+                    <p><time datetime="2026">2026</time> Planet Express. Entregando el futuro hoy.</p>
+                    <address>
+                        <p>Trabajo PostgreSQL (pgAdmin 4) + Express API desarrollado por BendeRCL</p>
+                        <p>Ubicación: Nueva Nueva York, Año 3000</p>
+                        <p><a href="index.html">Volver a la página de Inicio</a></p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

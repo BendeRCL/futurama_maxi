@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: planet-express-futura
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: personajes-db
+          property: connectionString
+
+databases:
+  - name: personajes-db
+    databaseName: personajes
+    plan: free
