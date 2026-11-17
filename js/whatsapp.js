@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const telefono = "56988476743";
         const mensaje = "Hola, quisiera obtener mas informacion.";
+        const imagen = "img/futurama-logo.png"
 
         const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
