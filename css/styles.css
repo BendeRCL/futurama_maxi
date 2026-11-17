@@ -241,22 +241,24 @@ body {
 }
 
 .btn-whatsapp {
-    background: linear-gradient(135deg, var(--color-primary), #FF8C00);
-    color: white;
-    border: 1px solid var(--color-primary);
-    padding: 0.7rem 1.5rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: all var(--transition);
-    flex-shrink: 0;
-    box-shadow: 0 4px 15px rgba(255, 109, 0, 0.3);
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #ffffff;
+  border: 1px solid #128C7E;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--transition, 0.3s ease);
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
 
 .btn-whatsapp:hover {
-    background-color: #128C7E;
-    transform: scale(1.05);
+  background: linear-gradient(135deg, #128C7E, #075E54);
+  border-color: #075E54;
+  box-shadow: 0 6px 18px rgba(18, 140, 126, 0.35);
+  transform: scale(1.05);
 }
 
 .btn-primary,
